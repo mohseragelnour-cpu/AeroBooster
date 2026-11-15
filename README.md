@@ -6,7 +6,9 @@ built around a nitrate-salt heat store and a dual-window control rule.
 
 - Inventor: **Mohammed Abdelhameed Seragelnour Elwasela** — ORCID [0009-0005-5622-0760](https://orcid.org/0009-0005-5622-0760)
 - Filed invention: international patent application **PCT/IB2026/062276** (filed 11 November 2026),
-  published openly on Zenodo: [10.5281/zenodo.24154141](https://doi.org/10.5281/zenodo.24154141)
+  published openly on Zenodo: [10.5281/zenodo.24154141](https://doi.org/10.5281/zenodo.24154141) (version 1, filed documents)
+- This release on Zenodo: [10.5281/zenodo.24250456](https://doi.org/10.5281/zenodo.24250456) (version 2, Revision B / C.3)
+- Live simulator: https://mohseragelnour-cpu.github.io/AeroBooster/
 - Humanitarian-use pledge: see [PLEDGE.md](PLEDGE.md)
 
 > **Status.** Everything here is designed and simulated. **No prototype has been built or measured yet.**
@@ -77,6 +79,8 @@ See [CITATION.cff](CITATION.cff). Contact: mohseragelnour@gmail.com
 وقاعدة تحكم بنافذتين. يضم هذا المستودع دراسات التصميم ونماذج المحاكاة بلغة بايثون، ومحاكي
 السيناريوهات التفاعلي، ومواصفات النموذج الأولي P1.
 
+- **Zenodo:** الإصدار الأول (الوثائق المودعة) 10.5281/zenodo.24154141، والإصدار الثاني (النسخة B وC.3) 10.5281/zenodo.24250456.
+- **المحاكي على الإنترنت:** https://mohseragelnour-cpu.github.io/AeroBooster/
 - **الحالة:** كل ما هنا مصمم ومُحاكى حاسوبيًا، **ولم يُبنَ أي نموذج ولم يُقَس شيء بعد.**
 - **العلاقة بالطلب المودَع:** يصف طلب PCT/IB2026/062276 تجسيدًا بمركّز ثابت. أما النسخة B
   (أحواض متتبعة) والنسخة C (شحن بالألواح الكهروضوئية) فدراسات تصميم لاحقة منشورة هنا كشفًا

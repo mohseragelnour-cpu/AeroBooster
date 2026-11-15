@@ -19,7 +19,12 @@ keywords:
   - photovoltaic heating
   - humanitarian energy
   - open hardware
+doi: "10.5281/zenodo.24250456"
+url: "https://github.com/mohseragelnour-cpu/AeroBooster"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24250456"
+    description: "Version 2 on Zenodo: Revision B / C.3 models, simulator, articles and P1 prototype"
   - type: doi
     value: "10.5281/zenodo.24154141"
     description: "First record: filed application PCT/IB2026/062276 (all versions resolve via the concept DOI)"
