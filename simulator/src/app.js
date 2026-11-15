@@ -192,7 +192,7 @@
         $("profile").value = "p_" + nearestProfile(p.coords.latitude); st.power = null; updateLink();
         setStatus("locStatus", `الموقع: ${p.coords.latitude.toFixed(3)}, ${p.coords.longitude.toFixed(3)} (دقة ±${Math.round(p.coords.accuracy)} م). جارٍ جلب بيانات NASA POWER…`, "ok");
         fetchPower();
-      }, err => setStatus("locStatus", "تعذّر الحصول على الموقع (" + err.message + "). داخل صفحة claude.ai يُمنع الموقع؛ افتح الملف المحمّل في المتصفح، أو أدخل الإحداثيات يدويًا.", "err"),
+      }, err => setStatus("locStatus", "تعذّر الحصول على الموقع (" + err.message + "). اسمح للمتصفح بالوصول إلى الموقع، أو أدخل خط العرض والطول يدويًا.", "err"),
       { enableHighAccuracy: false, timeout: 12000, maximumAge: 600000 });
     } catch (e) { setStatus("locStatus", "الموقع ممنوع في هذه الصفحة. أدخل الإحداثيات يدويًا.", "err"); }
   }
@@ -225,7 +225,7 @@
       if (!r.ok) throw new Error("HTTP " + r.status);
       usePower(parsePower(await r.json()), "NASA POWER للموقع " + $("lat").value + ", " + $("lon").value);
     } catch (e) {
-      setStatus("locStatus", "تعذّر الاتصال بـ NASA POWER (" + (e.message || e) + "). صفحة claude.ai تمنع الاتصال بمواقع أخرى: افتح الملف المحمّل في متصفحك، أو افتح الرابط في الأسفل والصق النتيجة. يُستعمل المناخ المدمج الآن.", "err");
+      setStatus("locStatus", "تعذّر الاتصال بـ NASA POWER (" + (e.message || e) + "). تحقق من الاتصال بالإنترنت، أو افتح الرابط في الأسفل والصق النتيجة. يُستعمل المناخ المدمج الآن.", "err");
     } finally { b.disabled = false; }
   }
   function pastePower() {
