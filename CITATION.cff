@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "AeroBooster: open solar-thermal cooking and heating — Revision B/C.3 models, simulator and P1 prototype"
+version: "2.0.0"
+date-released: "2026-11-15"
+type: software
+authors:
+  - family-names: "Abdelhameed Seragelnour Elwasela"
+    given-names: "Mohammed"
+    orcid: "https://orcid.org/0009-0005-5622-0760"
+license: MIT
+keywords:
+  - solar thermal
+  - clean cooking
+  - latent heat storage
+  - molten salt
+  - thermal energy storage
+  - parabolic trough
+  - photovoltaic heating
+  - humanitarian energy
+  - open hardware
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24154141"
+    description: "First record: filed application PCT/IB2026/062276 (all versions resolve via the concept DOI)"

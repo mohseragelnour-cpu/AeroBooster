@@ -1,0 +1,170 @@
+AEROBOOSTER P1 PROTOTYPE – MANUFACTURING DRAWING & BLUEPRINT PROMPTS (15 November 2026)
+Paste each prompt separately into the image generator. Style: precise technical engineering drawing,
+black lines on white background, ISO first-angle projection, all dimensions in millimetres.
+------------------------------------------------------------------------------------------------------------
+
+DRAWING 1 – SALT TANK: GENERAL ARRANGEMENT (3-VIEW + ISOMETRIC)
+
+Generate a precise engineering manufacturing drawing of a cylindrical steel tank.
+Style: black lines on white background, ISO first-angle projection, clean dimension lines,
+leader arrows, centre lines shown as long-dash-short-dash.
+
+Three orthographic views plus one isometric pictorial in the top-right corner:
+- FRONT VIEW (elevation): a cylinder ⌀300 mm outer diameter, 200 mm tall, wall thickness 3 mm mild steel.
+  A flanged rim at the top: flange width 15 mm, thickness 5 mm, with 8 equally spaced M8 bolt holes on PCD ⌀330 mm.
+  At the bottom centre: a threaded boss M20×1.5 for the cartridge heater entry.
+  On the side, 100 mm from the bottom: two ⅛″ BSP threaded bosses for thermocouple compression fittings, spaced 60° apart.
+  On the side, 150 mm from the bottom: one more ⅛″ BSP thermocouple boss.
+- SIDE VIEW (right): showing the same cylinder rotated 90°, thermocouple bosses visible on the profile.
+- TOP VIEW (plan): circular flange with 8 bolt holes, PCD marked, heater boss hidden-line at centre bottom.
+- ISOMETRIC: small pictorial of the finished tank with all bosses visible.
+
+Dimensions to show: ⌀300, 200 height, 3 wall, 15 flange width, 5 flange thickness, ⌀330 PCD, 8×M8 holes,
+M20×1.5 heater boss, 3× ⅛″ BSP thermocouple bosses with heights 100 and 150 from bottom.
+Title block: "AEROBOOSTER P1 – SALT TANK", Drawing 1 of 8, material: mild steel 3 mm, scale 1:2, all dims in mm.
+Finish: internal surfaces sandblasted and coated with high-temperature paint. Welds: full-penetration butt, ground flush.
+
+---
+
+DRAWING 2 – SALT TANK: CROSS-SECTION (VERTICAL CUT A-A)
+
+Generate a precise engineering cross-section drawing.
+Style: black lines on white, hatching for cut metal (45° lines), ISO first-angle.
+
+A single vertical section through the centre of the salt tank (section A-A from Drawing 1).
+- Steel wall 3 mm, hatched.
+- Inside: pale orange fill representing solar salt (60% NaNO₃ / 40% KNO₃), level at 90% of internal height (180 mm salt, 20 mm headspace).
+- At the bottom: the cartridge heater shown as a horizontal tube ⌀12.5 × 150 mm long, centred, entering through the M20 boss with a gasket ring.
+- At the top: flanged rim with bolt holes (shown in section), a high-temperature gasket ring 2 mm thick, and the cast-iron baking plate ⌀250 mm × 12 mm thick sitting on the gasket.
+- Three thermocouple probes shown as thin lines entering through the side bosses, tips at: centre of salt mass (TC1), near inner wall at mid-height (TC2), and 10 mm below the baking plate (TC3).
+- Dimension the internal diameter (294 mm), salt fill height (180 mm), headspace (20 mm), plate thickness (12 mm), gasket (2 mm), heater position (15 mm above internal bottom).
+
+Title block: "P1 – SALT TANK SECTION A-A", Drawing 2 of 8, scale 1:1.
+
+---
+
+DRAWING 3 – BAKING PLATE DETAIL
+
+Generate a precise engineering drawing of a round cast-iron baking plate.
+Style: black lines on white, ISO first-angle projection.
+
+Two views:
+- TOP VIEW: a disc ⌀250 mm, with a raised rim 8 mm high × 3 mm thick at the edge. Surface marked "machined flat, Ra ≤ 3.2 µm".
+  A small notch 5 mm wide in the rim for a thermocouple wire exit.
+- SIDE VIEW (section): the plate is 12 mm thick, rim 8 mm high above the top surface. The underside has 6 concentric grooves
+  1.5 mm deep, 2 mm wide, spaced 15 mm apart, to increase contact area with the salt.
+
+Dimensions: ⌀250, 12 thick, rim 8 high × 3 wide, notch 5 wide, grooves 1.5 deep × 2 wide × 15 pitch.
+Material note: grey cast iron GG-25, food-safe seasoning coating on cooking surface.
+Title block: "P1 – BAKING PLATE", Drawing 3 of 8, scale 1:1.
+
+---
+
+DRAWING 4 – FLANGED LID WITH HANDLE
+
+Generate a precise engineering drawing of a flanged insulated lid.
+Style: black lines on white, ISO first-angle projection.
+
+Two views:
+- TOP VIEW: circular disc ⌀330 mm (matches tank flange), 8× M8 clearance holes on PCD ⌀330 mm matching the tank.
+  A central handle: a U-shaped steel bar, 120 mm wide, 40 mm tall, ⌀10 mm round bar, welded to two pads on the lid.
+- CROSS-SECTION (through centre): the lid is a sandwich: 2 mm stainless steel top sheet, 30 mm ceramic fibre board core,
+  2 mm stainless steel bottom sheet. Total 34 mm thick. The bolt holes pass through all layers with steel sleeves.
+  The bottom face has a turned recess ⌀252 mm, 3 mm deep, that fits over the baking plate rim as a locating spigot.
+
+Dimensions: ⌀330 OD, 34 total thickness, 30 insulation, 2+2 steel sheets, PCD ⌀330, 8×M8.5 clearance holes,
+handle 120 wide × 40 tall × ⌀10 bar, locating recess ⌀252 × 3 deep.
+Material: AISI 304 stainless steel sheets, 30 mm ceramic fibre board (1260 °C rated), handle mild steel.
+Title block: "P1 – INSULATED LID", Drawing 4 of 8, scale 1:1.
+
+---
+
+DRAWING 5 – INSULATION ASSEMBLY (EXPLODED CROSS-SECTION)
+
+Generate a precise engineering exploded cross-section showing three insulation stages around the salt tank.
+Style: black lines on white, hatching for each material with different patterns, ISO convention.
+
+Vertical half-section, exploded vertically and radially to show layer order:
+- Centre: the steel salt tank (Drawing 1 outline), ⌀300 × 200 mm.
+- STAGE A (innermost): 50 mm ceramic fibre blanket (white, wavy hatch), wrapped directly around and below the tank.
+  Inner ⌀ 300, outer ⌀ 400. Secured with stainless steel wire ties every 60 mm, shown as small circles on the section.
+- STAGE B (middle): 100 mm rock wool slab segments (grey, diagonal hatch), cut to fit as 6 curved segments around Stage A.
+  Inner ⌀ 400, outer ⌀ 600. Joints staggered from Stage A joints. Held with galvanised wire ties.
+- STAGE C (outermost): 50 mm rock wool slab segments (lighter grey hatch), 4 curved segments.
+  Inner ⌀ 600, outer ⌀ 700. Held with buckle straps.
+- Outer shell: 0.6 mm galvanised sheet metal cylinder, ⌀700 × 310 mm tall (tank 200 + bottom insulation 50 + top clearance 60).
+  Formed from a single sheet with a longitudinal overlap seam, two stainless buckle straps.
+
+Dimensions: all diameters (300, 400, 600, 700), insulation thicknesses (50, 100, 50), outer shell height 310.
+Bottom insulation: 50 mm ceramic fibre disc + 50 mm rock wool disc under the tank.
+Title block: "P1 – INSULATION ASSEMBLY", Drawing 5 of 8, scale 1:2.
+
+---
+
+DRAWING 6 – THERMOCOUPLE LAYOUT
+
+Generate a precise engineering diagram showing the positions of 7 thermocouples in the P1 assembly.
+Style: black lines on white, thermocouple positions shown as red filled circles with labels TC1–TC7.
+
+A vertical cross-section of the complete insulated assembly (tank + all insulation + outer shell + lid).
+Thermocouple positions:
+- TC1: centre of salt mass, tip at geometric centre (r=0, h=90 mm from internal bottom). Wire enters through side boss at 100 mm height.
+- TC2: salt near wall, tip 5 mm from inner wall at mid-height (h=100 mm). Wire enters through side boss at 100 mm height.
+- TC3: underside of baking plate, tip bonded to plate centre with thermal paste. Wire exits through lid notch.
+- TC4: top surface of baking plate, edge position (r=100 mm). Wire exits through lid notch.
+- TC5: mid-insulation, tip at boundary between Stage A and Stage B (r=200 mm, h=100 mm). Wire passes through insulation.
+- TC6: outer skin, tip bonded to outside of sheet metal shell (r=350 mm, h=150 mm). Wire clipped externally.
+- TC7: ambient, on a small stand 300 mm away from the assembly, at the same height as the tank centre.
+
+A small table in the corner lists: TC#, Location, Type (all K-type), Range (0–400 °C for TC1–TC4, 0–200 °C for TC5–TC6, −10–60 °C for TC7).
+Title block: "P1 – THERMOCOUPLE LAYOUT", Drawing 6 of 8, scale 1:3.
+
+---
+
+DRAWING 7 – HEATER INSTALLATION DETAIL
+
+Generate a precise engineering detail drawing of the cartridge heater mounting in the bottom of the salt tank.
+Style: black lines on white, enlarged scale, ISO first-angle.
+
+Two views:
+- SECTION VIEW (vertical, enlarged): the bottom of the tank. The M20×1.5 threaded boss is welded to the tank bottom
+  (full-penetration weld, shown with weld symbol). A high-temperature O-ring (Viton, 350 °C rated) sits in a groove
+  in the boss. The cartridge heater (⌀12.5 mm × 150 mm, 1 kW, 240 V) slides through the boss into the salt.
+  A compression nut on the outside locks the heater in place. The heater tip is 15 mm above the inner bottom surface.
+  The power cable exits through a ceramic insulator sleeve in the compression nut.
+- EXTERNAL VIEW: the underside of the tank showing the boss, compression nut, cable exit, and strain relief clamp.
+
+Dimensions: M20×1.5 thread, ⌀12.5 heater OD, 150 mm insertion length, O-ring groove 2.5 × 2.0 mm, 15 mm clearance above bottom.
+Material notes: boss – mild steel, machined; O-ring – FKM/Viton; compression nut – brass; insulator – alumina ceramic.
+Electrical note: 1 kW, 240 VAC, 4.17 A. Cable: silicone-insulated, 1.5 mm², with earth wire bonded to tank body.
+Title block: "P1 – HEATER INSTALLATION", Drawing 7 of 8, scale 2:1.
+
+---
+
+DRAWING 8 – COMPLETE ASSEMBLY: GENERAL ARRANGEMENT
+
+Generate a precise engineering general arrangement drawing of the complete P1 prototype.
+Style: black lines on white, ISO first-angle projection.
+
+Three views of the fully assembled unit (tank + insulation + shell + lid + heater + thermocouples):
+- FRONT VIEW: the outer shell ⌀700 × 310 mm, two buckle straps visible, the insulated lid on top with its handle,
+  the heater cable exiting at the bottom. Thermocouple wires exit at mid-height (2 wires) and through the lid (2 wires).
+  Overall height with lid and handle: approximately 385 mm.
+- SIDE VIEW: same proportions, 90° rotated. The cable and wire bundle routed along the side and down to a connector block.
+- TOP VIEW: circular shell, lid handle across the centre, two thermocouple wires visible at the lid edge.
+
+Overall dimensions: ⌀700, 385 total height (310 shell + 34 lid + handle clearance), weight approximately 45 kg fully charged.
+A small bill of materials table (10 rows): item #, part name, material, quantity.
+1. Salt tank, mild steel 3 mm, 1
+2. Solar salt 60/40, NaNO₃/KNO₃, 12 kg
+3. Baking plate, cast iron GG-25, 1
+4. Insulated lid, SS304 + CFB, 1
+5. Ceramic fibre blanket 50 mm, 128 kg/m³, 1 set
+6. Rock wool slab 100 mm, 1 set
+7. Rock wool slab 50 mm, 1 set
+8. Outer shell, galvanised steel 0.6 mm, 1
+9. Cartridge heater 1 kW, Incoloy sheath, 1
+10. Thermocouples type K, SS sheath, 7
+
+Title block: "P1 – COMPLETE ASSEMBLY", Drawing 8 of 8, scale 1:3.
+Revision: C.3, Date: November 2026. Author: M. A. Seragelnour. ORCID 0009-0005-5622-0760.

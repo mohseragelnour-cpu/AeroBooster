@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeroBooster – محاكي السيناريوهات (النسخة C)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f3ef;--card:#fff;--ink:#1d1c1a;--ink2:#52514e;--mut:#8a8984;--line:#e3e1da;--hot:#c2410c;--hot2:#ea580c;--sun:#eda100;--water:#2a78d6;--ok:#15803d;--warn:#b45309;--bad:#b91c1c;--salt:#f6c9a0}
+*{box-sizing:border-box}body{margin:0;font-family:Cairo,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.55}
+header{background:linear-gradient(90deg,#14263d,#1e3a5c);color:#fff;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{margin:0;font-size:20px;font-weight:800}header p{margin:2px 0 0;font-size:12px;color:#cdd6e2}
+.wrap{max-width:1500px;margin:0 auto;padding:16px;display:grid;grid-template-columns:380px 1fr;gap:16px}
+@media(max-width:1000px){.wrap{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:15px;margin:0 0 10px;font-weight:800;display:flex;align-items:center;gap:8px}
+.num{display:inline-block;width:22px;height:22px;border-radius:7px;background:#fde7d6;color:var(--hot);font-size:12px;text-align:center;line-height:22px;font-weight:800}
+label{font-size:12px;font-weight:600;color:var(--ink2);display:block;margin:8px 0 3px}
+input[type=number],select,textarea{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:9px;font-family:inherit;font-size:13px;background:#fbfbf9}
+input[type=range]{width:100%;accent-color:var(--hot2)}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.btn{border:0;border-radius:10px;padding:8px 12px;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer;background:#1e3a5c;color:#fff}
+.btn.alt{background:#fff;color:#1e3a5c;border:1px solid #1e3a5c}.btn.hot{background:var(--hot2)}
+.btn:disabled{opacity:.5;cursor:wait}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.status{font-size:12px;color:var(--ink2);margin-top:8px;background:#f7f6f2;border-radius:8px;padding:7px 9px}
+.status.err{color:var(--bad);background:#fdf0f0}.status.ok{color:var(--ok);background:#effaf2}
+.scen{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.sc{border:2px solid var(--line);border-radius:12px;padding:8px;cursor:pointer;background:#fff;text-align:center;transition:.15s}
+.sc:hover{border-color:#f3b48a}.sc.on{border-color:var(--hot2);background:#fff7f1}
+.sc svg,.sc img{width:100%;height:84px;object-fit:cover;border-radius:8px;background:#f2efe8}
+.sc b{display:block;font-size:12.5px;margin-top:5px}.sc small{color:var(--mut);font-size:11px;direction:ltr;display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px}
+.kpi .v{font-size:22px;font-weight:800;direction:ltr;text-align:right}.kpi .l{font-size:11.5px;color:var(--ink2)}
+.good{color:var(--ok)}.mid{color:var(--warn)}.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}th,td{padding:6px 7px;border-bottom:1px solid var(--line);text-align:right}
+th{background:#f4f3ef;font-weight:700}td.n{direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+.bar{height:9px;border-radius:5px;background:#eee;overflow:hidden;min-width:80px}.bar i{display:block;height:100%}
+.note{font-size:12px;color:var(--ink2);background:#fff8e6;border:1px solid #f3dfb0;border-radius:10px;padding:8px 10px;margin-top:8px}
+.tabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}.tab{padding:6px 10px;border-radius:9px;background:#ece9e1;cursor:pointer;font-weight:700;font-size:12.5px}.tab.on{background:#1e3a5c;color:#fff}
+.chart{width:100%;height:auto;background:#fcfcfb;border-radius:10px;border:1px solid var(--line)}
+footer{max-width:1500px;margin:0 auto;padding:0 16px 30px;font-size:11.5px;color:var(--mut)}
+.chk{display:flex;align-items:center;gap:6px;font-size:12.5px;margin-top:8px;color:var(--ink2)}.chk input{width:auto}
+.lt{direction:ltr;display:inline-block}
+.prog{height:6px;border-radius:4px;background:#eee;margin-top:8px;overflow:hidden;display:none}.prog i{display:block;height:100%;background:var(--hot2);width:0}
+</style>
+</head>
+<body>
+<header>
+  <div id="logo"></div>
+  <div style="flex:1;min-width:240px">
+    <h1>AeroBooster – محاكي السيناريوهات والتصميم العملي (النسخة C)</h1>
+    <p>مخزن ملحي يُشحن بالألواح الكهروضوئية أو بالحوض المتتبّع، لطبخ وخبز وماء ساخن وتدفئة – من كشك الشاي إلى المصنع. محاكاة سنوية 365 يومًا بخطوة 15 دقيقة. كل النتائج محسوبة، لم يُقَس منها شيء.</p>
+  </div>
+</header>
+
+<div class="wrap">
+<aside>
+  <section class="card">
+    <h2><span class="num">1</span> الموقع والطقس</h2>
+    <div class="row">
+      <div><label>خط العرض</label><input type="number" id="lat" step="0.01" value="15.59"></div>
+      <div><label>خط الطول</label><input type="number" id="lon" step="0.01" value="32.53"></div>
+    </div>
+    <label>مناخ مدمج (يُستعمل حين لا تتوفر بيانات الأقمار الصناعية)</label>
+    <select id="profile"></select>
+    <div class="btns">
+      <button class="btn" id="btnGps">📍 موقعي (GPS)</button>
+      <button class="btn alt" id="btnPower">🛰️ بيانات NASA POWER</button>
+    </div>
+    <div class="status" id="locStatus">يُستعمل المناخ المدمج للخرطوم.</div>
+    <details style="margin-top:8px"><summary style="font-size:12px;cursor:pointer">لا يعمل GPS أو الإنترنت؟ الصق بيانات NASA يدويًا</summary>
+      <div style="font-size:12px;color:var(--ink2);margin:6px 0">صفحة claude.ai تمنع الموقع والاتصال بمواقع أخرى. افتح هذا الرابط في متصفحك، انسخ كل النص الظاهر، والصقه هنا:</div>
+      <a id="powerLink" href="#" target="_blank" rel="noopener" style="font-size:11px;word-break:break-all;direction:ltr;display:block"></a>
+      <textarea id="powerPaste" rows="3" placeholder='{"type":"Feature", ... }' style="margin-top:6px;direction:ltr"></textarea>
+      <button class="btn alt" id="btnPaste" style="margin-top:6px">استخدم البيانات الملصقة</button>
+    </details>
+    <label class="chk"><input type="checkbox" id="storm" checked> أضف عاصفة غبار ثلاثة أيام في يناير (اختبار صمود)</label>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">3</span> التجهيزات لكل وحدة</h2>
+    <div id="archBox" style="display:none"><label>بنية المنشأة</label>
+    <select id="arch"><option value="central">مخزن مركزي واحد كبير (موصى به للمنشآت)</option><option value="modules">وحدات صغيرة متكررة 45 لترًا</option></select></div>
+    <label>مصدر الحرارة للمخزن الملحي</label>
+    <select id="mode">
+      <option value="pv">ألواح كهروضوئية + سخان (C-PV، موصى به)</option>
+      <option value="hybrid">حوض متتبّع + ألواح (C-Hybrid)</option>
+      <option value="trough">حوض متتبّع فقط (النسخة B)</option>
+    </select>
+    <label>عدد الوحدات <span class="lt" id="vN"></span></label><input type="range" id="N" min="1" max="60" step="1">
+    <label>ألواح كهروضوئية لكل وحدة <span class="lt" id="vPv"></span></label><input type="range" id="pv" min="0" max="12" step="0.5">
+    <label>حوض متتبّع لكل وحدة <span class="lt" id="vTr"></span></label><input type="range" id="tr" min="0" max="9" step="0.5">
+    <label>سعة المخزن الملحي <span class="lt" id="vSt"></span></label><input type="range" id="st" min="20" max="90" step="5">
+    <div class="row">
+      <div><label>مجمِّع الماء m² <span class="lt" id="vFl"></span></label><input type="range" id="fl" min="0" max="4" step="0.5"></div>
+      <div><label>خزان الماء L <span class="lt" id="vTk"></span></label><input type="range" id="tk" min="40" max="300" step="10"></div>
+    </div>
+    <label>عزل المخزن الحراري</label>
+    <select id="insul"></select>
+    <div class="status" id="geomLine" style="margin-top:6px"></div>
+    <label>جودة مستقبِل الحوض</label>
+    <select id="rec"><option value="expected">متوقعة: كروم أسود + غطاء وعاكس ثانوي</option><option value="cautious">حذرة: فقد أعلى</option></select>
+    <div class="row">
+      <div><label>العتبة العليا °م (C.1: 245) <span class="lt" id="vHi"></span></label><input type="range" id="hi" min="215" max="250" step="5"></div>
+      <div><label>العتبة السفلى °م <span class="lt" id="vLo"></span></label><input type="range" id="lo" min="100" max="210" step="10"></div>
+    </div>
+    <div class="row">
+      <div><label>أيام الكسرة/أسبوع <span class="lt" id="vKi"></span></label><input type="range" id="ki" min="0" max="7" step="1"></div>
+      <div><label>أيام الفرن/أسبوع <span class="lt" id="vOv"></span></label><input type="range" id="ov" min="0" max="7" step="1"></div>
+    </div>
+    <label>تنظيف المرايا والألواح كل <span class="lt" id="vCl"></span> يوم</label><input type="range" id="cl" min="1" max="21" step="1">
+    <label class="chk"><input type="checkbox" id="surplus" checked> استعمال الفائض: خراطيش، خبزة إضافية، بسترة ماء الشرب</label>
+    <div class="btns">
+      <button class="btn hot" id="btnRun">▶ شغّل المحاكاة</button>
+      <button class="btn alt" id="btnAuto">⚖ أصغر عدد وحدات يكفي</button>
+      <button class="btn alt" id="btnReset">↺ إعدادات السيناريو</button>
+    </div>
+    <div class="prog" id="prog"><i></i></div>
+  </section>
+</aside>
+
+<main>
+  <section class="card">
+    <h2><span class="num">2</span> السيناريو</h2>
+    <div class="scen" id="scen"></div>
+    <div class="note" id="scNote"></div>
+    <label style="margin-top:8px">أضف صورتك لهذا السيناريو (تبقى في متصفحك فقط)</label>
+    <input type="file" id="photo" accept="image/*">
+  </section>
+
+  <section class="card">
+    <h2><span class="num">4</span> النتائج على مدار السنة</h2>
+    <div class="kpis" id="kpis"></div>
+    <div class="tabs" id="tabs">
+      <span class="tab on" data-t="service">الخدمة</span><span class="tab" data-t="energy">الطاقة اليومية</span>
+      <span class="tab" data-t="boq">جدول الكميات</span><span class="tab" data-t="cost">التكلفة</span><span class="tab" data-t="year">حرارة المخزن عبر السنة</span><span class="tab" data-t="climate">الطقس</span>
+    </div>
+    <div id="tabBody"></div>
+    <div class="btns"><button class="btn alt" id="btnCopy">⧉ نسخ النتائج نصًا</button></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">5</span> مصفوفة السيناريوهات للموقع الحالي</h2>
+    <div style="font-size:12.5px;color:var(--ink2)">لكل سيناريو: أصغر عدد وحدات يخدم 95% من الوجبات والأحمال الثابتة، و90% من أسابيع الخبز، بمصدر الحرارة المختار أعلاه.</div>
+    <div class="btns"><button class="btn" id="btnMatrix">احسب المصفوفة</button></div>
+    <div id="matrix" style="overflow-x:auto;margin-top:10px"></div>
+  </section>
+</main>
+</div>
+
+<div style="max-width:1500px;margin:0 auto;padding:0 16px">
+  <section class="card">
+    <h2><span class="num">6</span> الرسم التخطيطي</h2>
+    <div class="tabs" id="dtabs"><span class="tab on" data-d="module">الوحدة المنزلية (مقطع)</span><span class="tab" data-d="central">المخزن المركزي للمنشآت (مقطع)</span></div>
+    <div id="drawing"></div>
+  </section>
+  <section class="card">
+    <h2><span class="num">7</span> مقاسات المخزن الحراري لكل الفئات</h2>
+    <div style="font-size:12.5px;color:var(--ink2)">محسوبة من حجم كل سيناريو وعزله. الوحدة أسطوانة رأسية والصاج على غطائها؛ المخزن المركزي صندوق ارتفاعه الداخلي 0.5 م والصاج والفرن على سطحه.</div>
+    <div id="sizes" style="overflow-x:auto;margin-top:8px"></div>
+  </section>
+  <section class="card">
+    <h2><span class="num">8</span> مصفوفة مجمِّع الماء مع المخزن الحراري</h2>
+    <div style="font-size:12.5px;color:var(--ink2)">كيف يغيّر حجم مجمِّع الماء المسطح ما يأخذه الماء من المخزن الملحي، وخدمة الماء والخبز. الأعمدة: مضاعفات مساحة المجمِّع الافتراضية لكل سيناريو.</div>
+    <div class="row" style="align-items:end;margin-top:6px"><div><label>المؤشر المعروض</label><select id="wMetric">
+      <option value="casc">حرارة يأخذها الماء من المخزن (kWh/يوم)</option><option value="water">أدنى خدمة للماء الساخن والتدفئة %</option>
+      <option value="bake">أسابيع الخبز الكاملة %</option><option value="meal">أدنى خدمة للوجبات %</option><option value="past">ماء مبستر لتر/يوم</option><option value="jacket">حرارة يستعيدها غلاف الماء من فقد المخزن (kWh/يوم)</option></select></div>
+      <div><button class="btn" id="btnWater">احسب المصفوفة</button></div></div>
+    <div id="wmatrix" style="overflow-x:auto;margin-top:10px"></div>
+  </section>
+  <section class="card">
+    <h2><span class="num">9</span> نتائج النموذج الأولي P1 ← إلى التصميم</h2>
+    <div style="font-size:12.5px;color:var(--ink2)">أدخل قياسات النموذج الأولي (مخزن 12 لترًا، ⌀30×20 سم) فتُحسب منها موصلية العزل الفعلية k وقدرة الصاج، ثم تُطبَّق على كل المحاكاة.</div>
+    <div class="row" style="flex-wrap:wrap;gap:14px;margin-top:8px">
+      <div style="flex:1;min-width:260px"><b style="font-size:13px">أ) اختبار الإبقاء T2</b>
+        <label>مرحلة العزل</label><select id="pStage"><option value="0.10">1: صوف صخري 100 مم</option><option value="0.15">2: 150 مم</option><option value="0.20">3: 200 مم</option></select>
+        <div class="row"><div><label>متوسط قدرة السخان W</label><input type="number" id="pW" value="81"></div><div><label>حرارة الملح T2 °م</label><input type="number" id="pT" value="245"></div><div><label>حرارة الغرفة °م</label><input type="number" id="pTa" value="30"></div></div>
+        <button class="btn alt" id="btnHold" style="margin-top:8px">احسب G و k</button></div>
+      <div style="flex:1;min-width:260px"><b style="font-size:13px">ب) اختبار التبريد T3 (CSV)</b>
+        <label>الصق السجل: time_min, … T2 … T6 (بعناوين الأعمدة)</label><textarea id="pCsv" rows="5" style="direction:ltr" placeholder="time_min,T1,T2,T3,T4,T5,T6,T7,P_W,E_Wh"></textarea>
+        <div class="btns"><button class="btn alt" id="btnFit">طابق منحنى التبريد</button><button class="btn alt" id="btnDemo">بيانات تجريبية للتجربة</button></div></div>
+      <div style="flex:1;min-width:260px"><b style="font-size:13px">ج) قدرة الصاج T4/T5</b>
+        <div class="row"><div><label>ماء kg</label><input type="number" id="fKg" value="3"></div><div><label>ارتفاع حرارة الماء K</label><input type="number" id="fDT" value="15"></div></div>
+        <div class="row"><div><label>دقائق</label><input type="number" id="fMin" value="10"></div><div><label>قطر قاعدة القدر سم</label><input type="number" id="fD" value="30"></div></div>
+        <button class="btn alt" id="btnFlux" style="margin-top:8px">احسب kW/m²</button></div>
+    </div>
+    <div class="status" id="pOut" style="margin-top:10px">لا توجد قياسات بعد. القيم المبدئية هي توقعات النموذج للمرحلة 1.</div>
+    <div class="btns"><button class="btn hot" id="btnApply" disabled>طبّق k المقاسة على المحاكي</button></div>
+    <div id="pChart"></div>
+  </section>
+</div>
+<footer>
+  AeroBooster © 2026 محمد عبد الحميد سراج النور الوسيلة · ORCID <span class="lt">0009-0005-5622-0760</span> · منشور بترخيص CC BY 4.0 مع تعهد بالاستخدام الإنساني ·
+  السجل الأول: <a href="https://doi.org/10.5281/zenodo.24154141" target="_blank" rel="noopener" class="lt">10.5281/zenodo.24154141</a> ·
+  بيانات الطقس الحية: <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">NASA POWER</a>.
+  النموذج: مخزن ملح شمسي 60/40 (انصهار 220–230 °م، 97 كيلوجول/كغم)، كفاءة الحوض تنخفض مع الحرارة، الألواح 17.2% من الإشعاع على اللوح. الأحمال لا تُخدم إلا فوق حرارتها الدنيا، وتوازن الطاقة يُتحقق منه في كل تشغيل.
+</footer>
+
+<script>/*ENGINE*/</script>
+<script>/*GEOM*/</script>
+<script>/*SCENARIOS*/</script>
+<script>/*APP*/</script>
+</body>
+</html>

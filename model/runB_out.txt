@@ -1,0 +1,182 @@
+patched == archived when new keys unused: True
+sunny share of clear-day beam for cloud factors: {1.0: 1.0, 0.8: 0.52, 0.7: 0.31, 0.6: 0.16, 0.55: 0.11, 0.5: 0.07, 0.45: 0.04}
+tracked-aperture beam energy, clear day: summer 6.68  winter 4.44 kWh/m2
+  receiver 200 C: loss   127 W per m2 aperture; efficiency at 0.746 kW/m2 = 38.0 %
+  receiver 235 C: loss   163 W per m2 aperture; efficiency at 0.746 kW/m2 = 33.1 %
+  receiver 270 C: loss   203 W per m2 aperture; efficiency at 0.746 kW/m2 = 27.8 %
+  receiver 290 C: loss   227 W per m2 aperture; efficiency at 0.746 kW/m2 = 24.6 %
+
+======================================================================================================================
+1. SAME BASIS FOR BOTH: wool 0.050, latent 97, winter 20 C, broken cloud (sun on/off), filed loads, 0.5 m2 flat
+======================================================================================================================
+  case                                                stew  kisra  oven  light     tea  heat   coll  dump  loss  peak
+-- A. filed fixed CPC, 5.59 m2 (collector as modelled)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   7.92  3.30  2.02   255
+  summer one dull day                                  7/7    6/7   2/3    6/7   70/70     -   7.13  2.79  1.90   255
+  summer two dull days                                 6/7    5/7   3/3    5/7   70/70     -   6.26  2.11  1.75   255
+  summer poor week                                     5/7    2/7   0/3    2/7   70/70     -   3.37  0.00  1.39   237
+  winter clear + heating                               7/7    7/7   0/3    0/7   56/70   7/7   6.50  0.00  1.63   226
+  winter poor + heating                                0/7    0/7   0/3    0/7    5/70   5/7   3.39  0.00  0.62   104
+-- B. tracked trough 4.0 m2, steel absorber, selective, glass envelope, C=12, optical 0.55
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   6.35  1.70  2.03   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   5.70  1.37  1.90   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   5.02  0.90  1.74   255
+  summer poor week                                     3/7    1/7   0/3    0/7   69/70     -   2.74  0.00  1.17   225
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.58  0.00  1.45   215
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.23  0.00  0.50    84
+
+======================================================================================================================
+2. OPTION B: aperture
+======================================================================================================================
+  case                                                stew  kisra  oven  light     tea  heat   coll  dump  loss  peak
+-- trough 3 m2
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   5.01  0.40  2.00   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   4.54  0.28  1.86   255
+  summer two dull days                                 5/7    5/7   1/3    5/7   70/70     -   4.05  0.17  1.67   255
+  summer poor week                                     2/7    0/7   0/3    0/7   68/70     -   2.22  0.00  1.00   217
+  winter clear + heating                               0/7    0/7   0/3    0/7   49/70   7/7   4.82  0.00  1.14   172
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   0/7   1.69  0.00  0.47    79
+-- trough 4 m2
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   6.35  1.70  2.03   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   5.70  1.37  1.90   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   5.02  0.90  1.74   255
+  summer poor week                                     3/7    1/7   0/3    0/7   69/70     -   2.74  0.00  1.17   225
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.58  0.00  1.45   215
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.23  0.00  0.50    84
+-- trough 5 m2
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   7.64  3.02  2.06   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   6.87  2.49  1.93   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   6.02  1.83  1.77   255
+  summer poor week                                     5/7    2/7   0/3    2/7   70/70     -   3.22  0.00  1.33   230
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   6.22  0.00  1.57   223
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   3/7   2.75  0.00  0.55    93
+-- trough 6 m2
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   9.01  4.35  2.07   255
+  summer one dull day                                  7/7    6/7   2/3    7/7   70/70     -   8.08  3.63  1.95   255
+  summer two dull days                                 6/7    5/7   3/3    6/7   70/70     -   7.05  2.75  1.80   255
+  summer poor week                                     6/7    3/7   1/3    3/7   70/70     -   3.60  0.00  1.47   252
+  winter clear + heating                               7/7    7/7   0/3    0/7   53/70   7/7   6.76  0.00  1.76   228
+  winter poor + heating                                0/7    0/7   0/3    0/7    5/70   5/7   3.25  0.00  0.60   101
+
+======================================================================================================================
+3. OPTION B, 4 m2: receiver and optics
+======================================================================================================================
+  case                                                stew  kisra  oven  light     tea  heat   coll  dump  loss  peak
+-- selective + insulated top cap (loss -15%)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   7.34  2.73  2.05   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   6.55  2.23  1.92   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   5.71  1.58  1.76   255
+  summer poor week                                     3/7    2/7   0/3    1/7   69/70     -   2.91  0.00  1.21   227
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.92  0.00  1.52   222
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.30  0.00  0.51    85
+-- selective + cap + secondary reflector (optical 0.58)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   8.04  3.42  2.06   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   7.17  2.81  1.93   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   6.21  2.05  1.76   255
+  summer poor week                                     3/7    2/7   0/3    2/7   70/70     -   3.09  0.00  1.26   229
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   6.25  0.00  1.55   224
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.44  0.00  0.52    87
+-- plain black paint, not selective (a2 0.067)
+  summer clear                                         7/7    0/7   0/3    0/7   70/70     -   2.78  0.00  1.48   212
+  summer one dull day                                  6/7    0/7   0/3    0/7   70/70     -   2.66  0.00  1.38   212
+  summer two dull days                                 5/7    0/7   0/3    0/7   70/70     -   2.54  0.00  1.26   212
+  summer poor week                                     2/7    0/7   0/3    0/7   68/70     -   2.13  0.00  0.95   188
+  winter clear + heating                               0/7    0/7   0/3    0/7   49/70   7/7   4.52  0.00  1.02   149
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   1.98  0.00  0.48    82
+-- standard all-glass evacuated tube as receiver, C=10.8 (beyond its 250 C rating)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -  13.10  8.39  2.08   255
+  summer one dull day                                  7/7    6/7   2/3    7/7   70/70     -  11.48  6.99  1.97   255
+  summer two dull days                                 6/7    5/7   3/3    6/7   70/70     -   9.73  5.40  1.81   255
+  summer poor week                                     5/7    3/7   1/3    3/7   70/70     -   4.04  0.35  1.52   255
+  winter clear + heating                               7/7    7/7   3/3    7/7   56/70   7/7   8.75  1.22  1.97   255
+  winter poor + heating                                0/7    0/7   0/3    0/7    1/70   4/7   2.88  0.00  0.56    96
+-- poor optics 0.45
+  summer clear                                         7/7    7/7   0/3    7/7   70/70     -   4.50  0.00  1.93   253
+  summer one dull day                                  6/7    6/7   0/3    6/7   70/70     -   4.13  0.00  1.80   253
+  summer two dull days                                 5/7    5/7   0/3    5/7   70/70     -   3.74  0.00  1.60   252
+  summer poor week                                     2/7    0/7   0/3    0/7   68/70     -   2.22  0.00  1.00   212
+  winter clear + heating                               0/7    0/7   0/3    0/7   49/70   7/7   4.75  0.00  1.14   168
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   0/7   1.75  0.00  0.47    79
+-- good glass mirrors 0.65
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   8.59  3.95  2.06   255
+  summer one dull day                                  7/7    6/7   2/3    6/7   70/70     -   7.66  3.26  1.93   255
+  summer two dull days                                 6/7    5/7   3/3    5/7   70/70     -   6.64  2.44  1.78   255
+  summer poor week                                     5/7    2/7   0/3    3/7   70/70     -   3.29  0.00  1.35   240
+  winter clear + heating                               7/7    7/7   0/3    0/7   56/70   7/7   6.51  0.00  1.64   226
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   3/7   2.70  0.00  0.54    92
+-- smaller absorber 28 mm, C=18, intercept lower (optical 0.50)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   7.49  2.89  2.05   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   6.66  2.35  1.92   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   5.77  1.66  1.75   255
+  summer poor week                                     3/7    2/7   0/3    1/7   69/70     -   2.82  0.00  1.18   227
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.87  0.00  1.50   221
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.14  0.00  0.50    84
+
+======================================================================================================================
+4. OPTION B, 4 m2: v2 store insulation and recovery jacket, 2 m2 flat collector
+======================================================================================================================
+  case                                                stew  kisra  oven  light     tea  heat   coll  dump  loss  peak
+-- as section 1 (150 mm wool, 0.5 m2 flat)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   6.35  1.70  2.03   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   5.70  1.37  1.90   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   5.02  0.90  1.74   255
+  summer poor week                                     3/7    1/7   0/3    0/7   69/70     -   2.74  0.00  1.17   225
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.58  0.00  1.45   215
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.23  0.00  0.50    84
+-- 50 mm aerogel + 200 mm wool (k_eff 0.040, 250 mm)
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   6.12  2.19  1.34   255
+  summer one dull day                                  7/7    6/7   2/3    6/7   70/70     -   5.52  1.76  1.26   255
+  summer two dull days                                 6/7    5/7   3/3    5/7   70/70     -   4.86  1.19  1.18   255
+  summer poor week                                     3/7    2/7   0/3    3/7   70/70     -   2.64  0.00  0.82   227
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.28  0.00  1.01   220
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   2/7   2.22  0.00  0.34    86
+--   + recovery jacket returning 60% of store loss
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   5.98  2.49  1.36   255
+  summer one dull day                                  7/7    6/7   2/3    7/7   70/70     -   5.35  2.03  1.31   255
+  summer two dull days                                 7/7    5/7   3/3    6/7   70/70     -   4.72  1.40  1.23   255
+  summer poor week                                     5/7    2/7   0/3    3/7   70/70     -   2.45  0.00  0.95   229
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.06  0.00  1.06   222
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   3/7   2.21  0.00  0.35    87
+--   + jacket + 2 m2 flat collector
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   5.97  2.51  1.36   255
+  summer one dull day                                  7/7    6/7   2/3    7/7   70/70     -   5.31  2.10  1.31   255
+  summer two dull days                                 7/7    5/7   3/3    7/7   70/70     -   4.62  1.52  1.24   255
+  summer poor week                                     6/7    3/7   0/3    3/7   70/70     -   2.31  0.00  1.03   235
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   4.61  0.00  1.10   224
+  winter poor + heating                                0/7    0/7   0/3    0/7   37/70   7/7   1.97  0.00  0.60   175
+-- 150 mm wool + jacket 60% + 2 m2 flat
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   6.09  2.07  2.09   255
+  summer one dull day                                  7/7    6/7   2/3    7/7   70/70     -   5.44  1.71  1.99   255
+  summer two dull days                                 6/7    5/7   3/3    7/7   70/70     -   4.76  1.20  1.86   255
+  summer poor week                                     6/7    2/7   0/3    3/7   70/70     -   2.43  0.00  1.43   228
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   4.64  0.00  1.66   224
+  winter poor + heating                                0/7    0/7   0/3    0/7   35/70   7/7   1.98  0.00  0.88   169
+
+======================================================================================================================
+5. UNIFORM HAZE instead of broken cloud (dust): beam dimmed all day
+======================================================================================================================
+  case                                                stew  kisra  oven  light     tea  heat   coll  dump  loss  peak
+-- A. fixed CPC
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   7.92  3.30  2.02   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   7.09  2.78  1.89   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   6.21  2.11  1.74   255
+  summer poor week                                     4/7    2/7   0/3    0/7   70/70     -   3.14  0.00  1.36   228
+  winter clear + heating                               7/7    7/7   0/3    0/7   56/70   7/7   6.50  0.00  1.63   226
+  winter poor + heating                                0/7    0/7   0/3    0/7   22/70   7/7   4.27  0.00  0.74   153
+-- B. trough 4 m2
+  summer clear                                         7/7    7/7   3/3    7/7   70/70     -   6.35  1.70  2.03   255
+  summer one dull day                                  6/7    6/7   2/3    6/7   70/70     -   5.59  1.35  1.86   255
+  summer two dull days                                 5/7    5/7   3/3    5/7   70/70     -   4.88  0.87  1.68   255
+  summer poor week                                     1/7    0/7   0/3    0/7   54/70     -   1.57  0.00  0.72   183
+  winter clear + heating                               7/7    0/7   0/3    0/7   56/70   7/7   5.58  0.00  1.45   215
+  winter poor + heating                                0/7    0/7   0/3    0/7    0/70   0/7   1.34  0.00  0.42    79
+
+======================================================================================================================
+6. OPTION B: tracker availability (days lost per week to a stuck drive)
+======================================================================================================================
+  case                                                stew  kisra  oven  light     tea  heat   coll  dump  loss  peak
+  clear summer week, 1 day(s) without tracking         6/7    6/7   3/3    6/7   70/70     -   5.66  1.25  1.83   255
+  clear summer week, 2 day(s) without tracking         5/7    5/7   2/3    5/7   70/70     -   4.95  0.87  1.63   255
+
+B 4 m2, v2 build, clear summer day (kWh): collected 5.97 | rejected by defocus 2.51 | store loss 1.36 (jacket recovers 0.82) | stew+morning 0.96 | kisra 0.73 | oven 0.23 | cascade 0.16 | flat collector 7.61
+store: usable 2.60 kWh, G 0.289 W/K = 56 W at 230/35 C

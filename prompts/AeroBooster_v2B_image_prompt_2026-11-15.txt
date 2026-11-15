@@ -1,0 +1,233 @@
+AEROBOOSTER v2 – REVISION B/C.3 – SEQUENTIAL IMAGE PROMPT (15 November 2026)
+Replaces the prompt of 12 November. The concentrator is now two tracked parabolic troughs with fixed receivers.
+C.3 update: insulation corrected to 200 mm rock wool (realistic); P1 prototype images added (21–30).
+Paste everything below the line into the image generator in one message.
+------------------------------------------------------------------------------------------------------------
+
+You will produce a series of 30 images of one and the same solar cooking and heating system.
+Rules for the whole series:
+- Generate IMAGE 1 only. Wait. When I write "next", generate the next image in the list. Continue until IMAGE 30.
+- The MASTER DESIGN below is fixed. Every image must show the same shapes, proportions, colours and materials.
+- Style: photorealistic engineering visualisation, natural daylight, clean and believable, no fantasy elements.
+- Setting: a modest single-storey household in a hot, dry, sunny region of Sudan; sandy yard, low mud-brick or block walls.
+- People, when shown, are ordinary adults in modest everyday clothing. No recognisable real persons.
+- No logos, no brand names, no watermarks. No written words in the image unless the image description asks for labels.
+
+MASTER DESIGN
+
+1. TWO TRACKED PARABOLIC TROUGHS (outdoors, in the yard)
+   - Two identical trough mirrors standing side by side, about 3 m apart.
+   - Each trough: a long curved mirror, 1.6 m wide and 1.9 m long, with a deep U-shaped parabolic cross-section.
+     The two rims of the U are level with the receiver tube. Inner surface is mirror-bright silver; back and ribs are matte grey steel.
+   - Each trough is one single curved mirror. There are NO flat side mirrors, NO extra panels, NO dish, NO lens.
+   - The long axis of each trough runs north–south and is tilted about 15 degrees: one end low (about 0.9 m above the ground),
+     the other end high (about 1.4 m above the ground). Two steel end posts carry each trough, one short, one tall.
+   - The mirror hangs like a cradle underneath its receiver tube and rotates around that tube to follow the sun from east to west.
+     A small weatherproof worm-gear drive box sits at the tall post.
+
+2. RECEIVERS (one per trough; they never move)
+   - A thin straight tube lying exactly along the focal line of each trough, about 0.4 m above the bottom of the U.
+   - It is a black steel tube 42 mm thick inside a clear glass tube 70 mm thick, with small pale ceramic rings holding the black tube
+     in the centre of the glass.
+   - Along the top of the glass runs a narrow insulated cap, about 11 cm wide, light aluminium outside and mirror-bright underneath.
+   - The receiver is 25 cm longer than the mirror at each end.
+   - The receiver is fixed to the two end posts. Only the mirror turns. Rigid insulated pipes, clad in dull aluminium and about
+     6 cm thick, leave the high end of each receiver and run along a low wall into the kitchen. No flexible hoses.
+
+3. SALT HEAT STORE WITH BAKING PLATE (inside the kitchen)
+   - A squat, heavily insulated cylinder about 0.85 m wide and 0.85 m tall, brushed stainless-steel skin, standing in a shallow steel tray.
+   - Insulation: 200 mm of rock wool (grey fibrous material) directly around the steel salt tank. No aerogel layer.
+   - Its top is a round, dark cast-iron baking plate 45 cm across, level with the kitchen counter, with a raised rim.
+     A thick insulated lid with a handle covers the plate when nobody is cooking.
+   - Beside the main plate, a smaller round contact pad 20 cm across for a kettle.
+   - On the front, a small panel with three green lamps and one red lamp and a small temperature display.
+   - The two insulated pipes from the troughs enter at the back.
+
+4. WATER STORE
+   - A white vertical cylinder, 120 litres, about 0.55 m wide and 1.2 m tall, on a low stand against the outside wall under a small roof.
+   - Thin insulated pipes link it to the flat water collector, to the kitchen and to the wash area.
+
+5. FLAT WATER COLLECTOR
+   - One flat glazed panel, 1 m by 2 m, dark blue-black under glass, aluminium frame, on a fixed tilted stand in the yard,
+     set slightly lower than the water store.
+
+6. PHOTOVOLTAIC PANELS AND CONTROLLER
+   - One standard photovoltaic module, about 1.1 m by 1.8 m, dark blue cells in an aluminium frame, on a fixed tilted stand next to
+     the troughs. A cable runs from it to the heat store.
+   - One small photovoltaic panel, about 0.5 m by 0.6 m, on a short pole.
+   - A grey controller box, 30 cm by 40 cm, on the kitchen's outside wall, with a small display.
+
+7. MODERN TWO-PLATE COOKTOP (inside the kitchen)
+   - A counter-height hob with two flat, round, dark metal plates set in a stainless-steel top. One rotary knob per plate.
+     No flame, no gas, no glowing elements. Two thin insulated pipes feed it from the heat store.
+
+8. OVEN
+   - A built-in insulated oven of about 40 litres beside the cooktop: stainless-steel door with a glass window and a round thermometer dial.
+
+9. ROOM HEATING
+   - One white flat panel radiator on the living-room wall, with two thin pipes coming from the water store.
+
+10. PORTABLE HEAT CARTRIDGE
+   - A flat round steel disc, 30 cm across and 12 cm thick, with two side handles and a removable insulated cover.
+     Its place is on the kettle pad of the heat store.
+
+Things that must never appear: flat mirrors beside the troughs, a satellite-dish reflector, bundles of glass vacuum tubes,
+a lens over the receiver, flames, smoke, chimneys, gas bottles, flexible hoses on the receivers, text or logos.
+
+IMAGE LIST
+
+IMAGE 1 – Whole system. Three-quarter aerial view of the household at mid-morning. In the yard: the two troughs (item 1) turned
+toward the morning sun in the east, the fixed receivers, the flat water collector, the photovoltaic module and the water store.
+The near wall of the kitchen is cut away to show the heat store with its baking plate, the cooktop, the oven and, in the next room,
+the radiator. Insulated pipes visibly connect the troughs to the heat store.
+
+IMAGE 2 – The two troughs at mid-morning, seen from ground level, standing height. Both mirrors are rotated about 45 degrees toward
+the east sun. The receivers stay in place above them. The sky and a bright line of light on the black receiver tube are reflected
+in the mirrors.
+
+IMAGE 3 – One trough at noon, seen exactly along its axis from the low end. The parabolic U cross-section is clear and symmetrical,
+1.6 m wide, with the small round receiver at the focus and the narrow cap above it. End post and bearing in the foreground.
+
+IMAGE 4 – Close-up of one receiver, about 60 cm of its length: black steel tube inside the clear glass tube, pale ceramic rings,
+the insulated cap along the top with its mirror-bright underside, and the mirror surface out of focus below.
+
+IMAGE 5 – Side view of one trough showing the tilt: low end on the left, high end on the right, short post and tall post,
+the drive box at the tall post, the receiver extending 25 cm beyond the mirror at both ends, and the rigid insulated pipes leaving
+the high end toward the house.
+
+IMAGE 6 – Parked position. Both troughs rotated fully away from the sun so that the mirrors face the ground at an angle, sun high
+in the sky. On the controller box a single green lamp is lit. Calm, tidy yard.
+
+IMAGE 7 – Kitchen interior, wide view. From left to right: the heat store with its lid removed and the dark baking plate visible,
+the two-plate cooktop, the oven. Clean plastered walls, a window showing the troughs outside.
+
+IMAGE 8 – Technical cutaway illustration of the heat store, vertical section, clean flat colours on white background. From the centre
+outwards: steel tank filled with pale orange salt, vertical metal fins, a coil of steel tube, a straight heating element near the
+bottom, a thick layer of 200 mm grey rock wool insulation (no aerogel), and the brushed stainless skin.
+The cast-iron plate closes the top, with the insulated lid above it. Numbered callout dots 1 to 7, digits only.
+
+IMAGE 9 – Baking kisra. A woman spreads a thin batter with a flat tool on the hot baking plate; a stack of finished thin breads on a
+tray beside her. The insulated lid rests on the counter. No flame anywhere.
+
+IMAGE 10 – A cooking pot on the baking plate, raised a few millimetres on a small metal spacer ring, steam rising gently.
+A kettle stands on the smaller pad beside it.
+
+IMAGE 11 – The modern two-plate cooktop in use: a frying pan on one plate, a saucepan on the other, a hand turning one of the knobs.
+The thin insulated feed pipes are visible below the counter.
+
+IMAGE 12 – The oven with its door open, a tray of round bread loaves inside, the thermometer dial pointing near 200.
+
+IMAGE 13 – The wash area. The white water store on its stand, a small brass mixing valve on the outlet pipe, a tap filling a wash
+basin with warm water, laundry on a line in the background.
+
+IMAGE 14 – The flat water collector on its tilted stand, with two thin insulated pipes rising to the white water store placed
+slightly higher. Morning light.
+
+IMAGE 15 – A simple living room on a cool winter evening: the white panel radiator on the wall, a family seated on floor cushions,
+warm indoor light, a window showing dusk outside.
+
+IMAGE 16 – The photovoltaic module on its stand beside the troughs, the small panel on its pole, and a close view of the grey
+controller box on the wall with its display lit.
+
+IMAGE 17 – A man lifts the portable heat cartridge by its two handles from the kettle pad of the heat store. Inset in a corner:
+the same cartridge inside a tent, turned over, with a small pot simmering on it.
+
+IMAGE 18 – After sunset. Deep blue sky, the troughs parked and dark outside the window. Inside, the family cooks the evening meal
+on the baking plate by lamp light. No flame under the pot.
+
+IMAGE 19 – Communal kitchen for several shelters in a camp: four of the same troughs in a row, two heat stores side by side under a
+shade roof, several people cooking and baking, water store and wash taps to one side. Orderly and clean.
+
+IMAGE 20 – Summary diagram. A clean isometric drawing of the whole system on a white background with numbered callout dots 1 to 10
+matching the MASTER DESIGN items: 1 troughs, 2 receivers, 3 heat store with baking plate, 4 water store, 5 flat water collector,
+6 photovoltaic panels and controller, 7 cooktop, 8 oven, 9 radiator, 10 portable cartridge. Digits only, no words.
+Red lines for hot pipes, blue lines for water pipes, a thin green line for the cable from the photovoltaic module to the heat store.
+
+--- PROTOTYPE P1 IMAGES (added in C.3 update) ---
+
+IMAGE 21 – P1 bench store, complete assembly, studio photo on white background.
+A squat steel cylinder, ⌀300 mm × 200 mm tall, made of 3 mm mild steel, welded seams visible. On the top, a flanged lid carrying
+a dark cast-iron baking plate ⌀250 mm with a raised rim. Seven thin type-K thermocouple wires emerge from small stainless
+compression fittings: three on the lid, two on the side of the tank, two through the insulation. A 1 kW cartridge heater with its
+power cable exits the bottom of the tank. The tank sits inside a 50 mm ceramic fibre blanket (white, fibrous texture), inside a
+100 mm rock wool jacket (grey), inside a final 50 mm rock wool layer, all held by a thin sheet-metal outer shell with buckle straps.
+A small digital temperature display is clipped to one thermocouple wire. Scale reference: a 30 cm ruler stands beside the assembly.
+
+IMAGE 22 – P1 cutaway, vertical section, technical illustration on white background, clean flat colours.
+Cross-section through the centre of the P1 bench store. From inside out:
+- Centre: steel tank (3 mm wall, hatched), filled with pale orange solar salt 60/40 (dotted fill), 10% headspace at top.
+- A 1 kW cartridge heater tube near the bottom of the salt.
+- Cast-iron baking plate on top, sealed with a high-temperature gasket on the flange.
+- First insulation ring: 50 mm ceramic fibre blanket (white with fibre texture).
+- Second insulation ring: 100 mm rock wool (grey).
+- Third insulation ring: 50 mm rock wool (lighter grey).
+- Outer shell: thin sheet metal.
+- Seven thermocouple positions marked with red dots and labels: TC1 salt centre, TC2 salt wall, TC3 plate centre,
+  TC4 plate edge, TC5 insulation mid, TC6 outer skin, TC7 ambient (on a small stand away from the unit).
+Numbered callout dots 1–7 for each layer. Dimensions shown: ⌀300, 200 height, 50+100+50 insulation thicknesses.
+
+IMAGE 23 – P1 bake test in progress, laboratory setting.
+The P1 bench store on a sturdy workbench. The insulated lid removed. A thin round of wet dough placed on the hot baking plate.
+A hand holds a non-contact infrared thermometer aimed at the plate showing ~220 °C. A laptop screen in the background shows
+a live temperature chart with seven coloured lines. A digital watt-meter between the wall outlet and the heater cable.
+Clean, well-lit workshop environment with concrete floor.
+
+IMAGE 24 – P1 standby loss test, night-time laboratory.
+The P1 bench store fully insulated (lid on), sitting on the workbench. All thermocouple wires connected to a small data logger
+with a blinking green LED. A clock on the wall shows 20:00. The room is dim, lit only by the data logger LED and a desk lamp.
+A notebook beside the logger reads "T2 – Standby, start 250 °C". No heater cable is connected (unplugged, coiled beside the unit).
+
+IMAGE 25 – P1 exploded view, technical illustration on white background.
+An exploded isometric view of all P1 components, separated vertically with thin dashed assembly lines between them.
+From bottom to top: outer sheet-metal shell with buckle straps → 50 mm rock wool ring → 100 mm rock wool ring →
+50 mm ceramic fibre blanket ring → steel tank (⌀300 × 200 mm, welded, with heater port at bottom and thermocouple ports) →
+solar salt (shown as a translucent orange cylinder) → cast-iron baking plate with raised rim → high-temperature gasket ring →
+flanged lid with handle. Beside the tank: 1 kW cartridge heater with cable, seven thermocouple probes with labelled tags.
+Each part has a numbered callout dot (1–12). No words except the numbers.
+
+IMAGE 26 – P1 insulation stages, three views side by side on white background.
+Three photos of the same P1 tank at the three insulation stages:
+Left: Stage A – tank wrapped only in 50 mm white ceramic fibre blanket, no outer shell, thermocouple wires visible.
+Centre: Stage B – Stage A plus 100 mm grey rock wool jacket added around it, held with wire ties.
+Right: Stage C – Stage B plus final 50 mm grey rock wool layer, all inside the sheet-metal outer shell with buckle straps.
+Below each photo a label: "Stage A: 50 mm CFB", "Stage B: +100 mm RW", "Stage C: +50 mm RW". Clean studio lighting.
+
+IMAGE 27 – Receiver cross-section, technical illustration on white background.
+A precise cross-section through the receiver tube perpendicular to its axis, enlarged to fill the frame.
+Centre: black steel absorber tube (⌀42 mm, wall 2 mm, selective coating shown as a thin dark layer).
+Around it: vacuum annulus (clear/white).
+Around that: clear glass envelope (⌀70 mm, wall 2 mm).
+At the top: the insulated cap (⌀110 mm arc, aluminium shell with mirror-bright underside, rock wool fill).
+Two small pale ceramic centring rings visible holding the absorber concentric.
+Below the glass: the parabolic mirror surface shown as radiating lines converging on the absorber.
+Dimensions labelled: 42, 70, 110 mm. Callout dots numbered 1–5.
+
+IMAGE 28 – Trough cross-section with ray trace, technical illustration on white background.
+A precise cross-section through one trough perpendicular to its long axis, at noon (mirror facing straight up).
+The parabolic U shape: 1.6 m rim-to-rim, depth about 0.35 m.
+Mirror surface shown as a thin reflective line.
+Steel ribs visible behind the mirror (3 ribs in section).
+At the focus: the receiver (shown as IMAGE 27's cross-section, small).
+Five parallel yellow sun rays enter from above, hit the mirror at different points, and reflect as red lines converging on the receiver.
+The end post and bearing are shown in light grey outline.
+Dimensions: 1600 mm width, ~350 mm depth, receiver at focal point.
+
+IMAGE 29 – Heat transport schematic, technical diagram on white background.
+A simplified plan-view diagram showing how heat flows through the system. Clean lines, no perspective.
+Top: two trough symbols (parabolic arcs) with "thermal oil" labels on red lines flowing to the heat store.
+Centre: the salt heat store (circle), with arrows showing: oil loop in/out (red), bake plate heat (orange arrow up),
+cooktop feed (orange arrows left), oven feed (orange arrow), water heating coil (blue-to-red gradient).
+Right: water store (blue circle) with arrows: flat collector in (blue), hot water out to taps (red), radiator loop (pink).
+Bottom: PV panel symbol with green line to controller, then to heat store (backup heater).
+Temperature labels at key points: 245 °C (store max), 140 °C (store min), 75 °C (water max).
+Dual-window rule shown as a small inset box: "Gate 08–20 h, T_hi 245 °C, T_lo 140 °C, ΔT 15 K".
+
+IMAGE 30 – Energy allocation Sankey diagram, technical diagram on white background.
+A horizontal Sankey diagram showing the annual energy flow for the home unit.
+Left: solar input splits into "Trough collection" and "Flat collector" and "PV".
+Centre: the salt store receives trough heat and PV backup heat; the water store receives flat collector heat.
+Right: useful outputs branch out: "Bake" (largest band), "Stew/cook" (medium), "Hot water" (medium),
+"Oven" (thin), "Room heat" (thin), "Portable cartridge" (thin).
+A grey band labelled "Standby loss ~96 W" exits downward from the salt store.
+Colours: solar input yellow, thermal red/orange, water blue, electrical green, losses grey.
+All numbers in kWh/year. No text except numbers and the labels above.

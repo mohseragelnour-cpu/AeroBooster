@@ -1,0 +1,16 @@
+P6 lower threshold 200 (as filed)              brkf  84 main  94 eve  97 tea  88 kisra/wk 2.40 (75%) oven/wk 1.57 (77%) cart 454 bonus 114
+P6 kisra 4/week                                brkf  99 main  99 eve 100 tea  99 kisra/wk 3.92 (96%) oven/wk 1.92 (96%) cart 533 bonus 179
+P6 kisra 7/week (every day)                    brkf  98 main  99 eve 100 tea  99 kisra/wk 6.51 (77%) oven/wk 1.64 (75%) cart 475 bonus 289
+P6 surplus uses off                            brkf  99 main  99 eve 100 tea 100 kisra/wk 2.96 (98%) oven/wk 1.92 (96%) cart 0 bonus 0
+P6L kisra 7/week                               brkf  99 main 100 eve 100 tea 100 kisra/wk 6.79 (92%) oven/wk 1.87 (91%) cart 473 bonus 273
+H3 kisra 7/week                                brkf  94 main  99 eve  99 tea  98 kisra/wk 6.25 (57%) oven/wk 1.96 (96%) cart 569 bonus 302
+P6L weather seed 11                            brkf  99 main 100 eve 100 tea 100 kisra/wk 2.96 (98%) oven/wk 1.92 (96%) cart 535 bonus 128
+H3 weather seed 11                             brkf  96 main  99 eve  99 tea  98 kisra/wk 2.94 (96%) oven/wk 1.94 (96%) cart 577 bonus 140
+P6L weather seed 23                            brkf 100 main 100 eve 100 tea 100 kisra/wk 2.96 (98%) oven/wk 1.94 (96%) cart 555 bonus 129
+H3 weather seed 23                             brkf  97 main  99 eve  99 tea  99 kisra/wk 2.96 (98%) oven/wk 1.96 (96%) cart 604 bonus 144
+P6L weather seed 42                            brkf 100 main 100 eve 100 tea 100 kisra/wk 2.96 (98%) oven/wk 1.96 (98%) cart 545 bonus 127
+H3 weather seed 42                             brkf  96 main  99 eve  99 tea  99 kisra/wk 2.96 (98%) oven/wk 1.98 (98%) cart 577 bonus 138
+
+annual energy (kWh/yr):
+P6L {'coll': 0, 'pv_heat': 2050, 'turned_away': 0, 'loss': 702, 'jacket': 237, 'cascade': 186, 'cook': 937, 'flat': 1271, 'divert': 1414, 'wash': 1413, 'heat': 0, 'cart': 136, 'bonus': 90, 'tankloss': 260} cartridges 543 bonus bakes 123 usable store kWh 3.91
+H3 {'coll': 1057, 'pv_heat': 1144, 'turned_away': 489, 'loss': 695, 'jacket': 226, 'cascade': 329, 'cook': 927, 'flat': 1146, 'divert': 1536, 'wash': 1407, 'heat': 0, 'cart': 147, 'bonus': 103, 'tankloss': 260} cartridges 589 bonus bakes 141 usable store kWh 2.61

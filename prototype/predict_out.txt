@@ -1,0 +1,11 @@
+salt kg 20.5 steel kg 7.8 usable 200-255 kWh 1.04
+charge energy 25->255 kWh (salt+steel) 2.80
+rw100: G 0.378 W/K, outer D 50 cm H 44 cm, hold at 245 C needs 81 W, cool 255->230 3.2 h, ->220 12.1 h, ->200 14.9 h, ->150 23.8 h
+rw150: G 0.305 W/K, outer D 60 cm H 54 cm, hold at 245 C needs 66 W, cool 255->230 4.0 h, ->220 15.0 h, ->200 18.5 h, ->150 29.6 h
+rw200: G 0.268 W/K, outer D 70 cm H 64 cm, hold at 245 C needs 58 W, cool 255->230 4.5 h, ->220 17.0 h, ->200 21.0 h, ->150 33.6 h
+flux 2 kW/m2 -> 141 W -> 3 kg water +6.8 K in 10 min
+flux 3 kW/m2 -> 212 W -> 3 kg water +10.1 K in 10 min
+flux 4 kW/m2 -> 283 W -> 3 kg water +13.5 K in 10 min
+flux 5 kW/m2 -> 353 W -> 3 kg water +16.9 K in 10 min
+flux 6 kW/m2 -> 424 W -> 3 kg water +20.3 K in 10 min
+plate area m2 0.0707 home kisra flux needed 4.8 kW/m2 -> 339 W on this plate

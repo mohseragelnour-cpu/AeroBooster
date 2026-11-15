@@ -1,0 +1,18 @@
+P6L C.1 (245, tea from tank)   s7   brkf 100 tea 100 kisra 98% oven 96% wash 99 heat 97 cart 543 bonus 123 bal -3.6e-12
+P6L C.1 (245, tea from tank)   s11  brkf 99 tea 100 kisra 98% oven 96% wash 98 heat 95 cart 535 bonus 128 bal 1.2e-11
+P6L C.1 (245, tea from tank)   s23  brkf 100 tea 100 kisra 98% oven 96% wash 99 heat 97 cart 555 bonus 129 bal -1.6e-13
+P6L old (240, no tea draw)     s7   brkf 100 tea 100 kisra 98% oven 96% wash 99 heat 98 cart 533 bonus 113 bal -1.0e-11
+P6L old (240, no tea draw)     s11  brkf 99 tea 100 kisra 98% oven 94% wash 98 heat 96 cart 526 bonus 123 bal 2.3e-12
+P6L old (240, no tea draw)     s23  brkf 100 tea 100 kisra 98% oven 94% wash 99 heat 98 cart 536 bonus 120 bal -1.9e-11
+P6L 240 + tea draw             s7   brkf 100 tea 100 kisra 98% oven 94% wash 99 heat 98 cart 524 bonus 112 bal 1.9e-12
+P6L 240 + tea draw             s11  brkf 99 tea 100 kisra 98% oven 94% wash 98 heat 95 cart 519 bonus 113 bal 1.5e-12
+P6L 240 + tea draw             s23  brkf 100 tea 100 kisra 98% oven 96% wash 99 heat 97 cart 532 bonus 116 bal 1.3e-11
+P6 30L C.1                     s7   brkf 99 tea 99 kisra 98% oven 96% wash 99 heat 98 cart 558 bonus 134 bal -4.3e-13
+P6 30L C.1                     s11  brkf 98 tea 99 kisra 96% oven 94% wash 99 heat 95 cart 548 bonus 133 bal -1.0e-11
+P6 30L C.1                     s23  brkf 99 tea 99 kisra 98% oven 94% wash 99 heat 98 cart 568 bonus 134 bal -5.9e-12
+H3 C.1                         s7   brkf 97 tea 99 kisra 98% oven 96% wash 99 heat 98 cart 589 bonus 141 bal 1.6e-11
+H3 C.1                         s11  brkf 96 tea 98 kisra 96% oven 96% wash 98 heat 95 cart 577 bonus 140 bal 1.2e-11
+H3 C.1                         s23  brkf 97 tea 99 kisra 98% oven 96% wash 99 heat 98 cart 604 bonus 144 bal -5.9e-12
+B trough6 C.1                  s7   brkf 89 tea 92 kisra 98% oven 92% wash 99 heat 98 cart 491 bonus 136 bal 3.7e-12
+B trough6 C.1                  s11  brkf 88 tea 92 kisra 94% oven 94% wash 98 heat 96 cart 465 bonus 134 bal 8.2e-12
+B trough6 C.1                  s23  brkf 90 tea 93 kisra 98% oven 94% wash 99 heat 98 cart 474 bonus 135 bal 7.8e-12
