@@ -67,6 +67,27 @@ Run files `runB`–`runB6` reproduce the published `*_out.txt` files exactly.
 - **Documents, drawings, images and data**: CC BY 4.0 — see [LICENSE-docs.md](LICENSE-docs.md).
 - The humanitarian-use pledge in [PLEDGE.md](PLEDGE.md) applies to the filed patent application.
 
+## v3.0.0 — P1-B build pack, sourcing catalogue and improvements (Nov 2026)
+
+Everything needed to build and measure the P1-B bench prototype, plus performance improvements documented
+against the prior art. All figures are simulation outputs, not measurements, pending the bench tests.
+
+- `prototype/p1b/AeroBooster_P1B_Manufacturing.pdf` — build spec: two fills (P1-S salt / P1-X iron+sand),
+  the four corrections, the simplified P1-X build and the first-heat moisture vent, BOM, tests T1–T6.
+- `drawings/AeroBooster_P1B_Drawings.pdf` — 9 engineering sheets (incl. the P1-X fill arrangement + vent).
+- `prototype/p1b/AeroBooster_P1B_Purchase_List.xlsx` — costed purchase list for both fills.
+- `prototype/p1b/AeroBooster_P1B_Sourcing_Catalogue.pdf` (+ `AeroBooster_P1B_Catalogue_source.zip`) — 16
+  components with specs and live supplier links, region-neutral, for anyone building the prototype.
+- `articles/AeroBooster_Improvements_over_PriorArt.pdf` — insulation, dry-store high-temperature operation,
+  contact-conductance and dual-input charging, each cited to prior art and quantified by simulation.
+- `model/p1_media.py`, `model/pv_direct.py`, `model/storage_time.py` — storage-media comparison, PV-direct
+  matching, and the storage-time / peak-temperature experiment.
+
+**Acknowledgement of prior art.** AeroBooster does not originate electric/PV-charged thermal-storage
+cooking. It builds on and cites existing work (NTNU / Morpho Solar with A. H. Tesfay; Ghana sand storage;
+Uganda rock storage; Ethiopian electric-*mitad* research); the improvements document lists the citations.
+Its contribution is the specific engineering integration and the documented improvements.
+
 ## Citation
 
 See [CITATION.cff](CITATION.cff). Contact: mohseragelnour@gmail.com

@@ -1,0 +1,72 @@
+[
+ {
+  "medium": "salt",
+  "ins": "baseline",
+  "Tmax": 255,
+  "peak_mean": 255.07910228961168,
+  "peak_top": 252.89064883958804,
+  "h_to_200": 18.301250015,
+  "h_to_150": 33.313922690000005,
+  "mass": {
+   "iron_kg": 2.6,
+   "sand_kg": 0.0,
+   "salt_kg": 19.5
+  }
+ },
+ {
+  "medium": "salt",
+  "ins": "improved",
+  "Tmax": 255,
+  "peak_mean": 255.0831473442915,
+  "peak_top": 254.83986635327497,
+  "h_to_200": 39.67091833500001,
+  "h_to_150": 67.924613805,
+  "mass": {
+   "iron_kg": 2.6,
+   "sand_kg": 0.0,
+   "salt_kg": 19.5
+  }
+ },
+ {
+  "medium": "iron_stack",
+  "ins": "baseline",
+  "Tmax": 320,
+  "peak_mean": 320.11058768864297,
+  "peak_top": 318.3714943205693,
+  "h_to_200": 22.777976394849787,
+  "h_to_150": 43.745507510729624,
+  "mass": {
+   "iron_kg": 61.6,
+   "sand_kg": 7.4,
+   "salt_kg": 0.0
+  }
+ },
+ {
+  "medium": "iron_stack",
+  "ins": "improved",
+  "Tmax": 320,
+  "peak_mean": 320.12789273881583,
+  "peak_top": 319.28128388467485,
+  "h_to_200": 48.54493133047211,
+  "h_to_150": 87.16831384120172,
+  "mass": {
+   "iron_kg": 61.6,
+   "sand_kg": 7.4,
+   "salt_kg": 0.0
+  }
+ },
+ {
+  "medium": "iron_stack",
+  "ins": "baseline",
+  "Tmax": 255,
+  "peak_mean": 255.1195550579085,
+  "peak_top": 253.88683749379595,
+  "h_to_200": 8.994123927038633,
+  "h_to_150": 29.853455472103008,
+  "mass": {
+   "iron_kg": 61.6,
+   "sand_kg": 7.4,
+   "salt_kg": 0.0
+  }
+ }
+]
