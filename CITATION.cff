@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "AeroBooster: open solar-thermal cooking and heating — Revision B/C.3 models, simulator and P1 prototype"
-version: "2.0.0"
-date-released: "2026-11-15"
+title: "AeroBooster: open solar-thermal cooking and heating — P1-B build pack, sourcing catalogue and improvements"
+version: "3.0.0"
+date-released: "2026-11-17"
 type: software
 authors:
   - family-names: "Abdelhameed Seragelnour Elwasela"
@@ -19,6 +19,9 @@ keywords:
   - photovoltaic heating
   - humanitarian energy
   - open hardware
+  - sensible heat storage
+  - scrap iron sand storage
+  - defensive publication
 doi: "10.5281/zenodo.24250456"
 url: "https://github.com/mohseragelnour-cpu/AeroBooster"
 identifiers:
