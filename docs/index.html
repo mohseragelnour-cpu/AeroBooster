@@ -61,8 +61,8 @@ footer{max-width:1500px;margin:0 auto;padding:0 16px 30px;font-size:11.5px;color
 <header>
   <div id="logo"></div>
   <div style="flex:1;min-width:240px">
-    <h1>AeroBooster – محاكي السيناريوهات والتصميم العملي (النسخة C)</h1>
-    <p>مخزن ملحي يُشحن بالألواح الكهروضوئية أو بالحوض المتتبّع، لطبخ وخبز وماء ساخن وتدفئة – من كشك الشاي إلى المصنع. محاكاة سنوية 365 يومًا بخطوة 15 دقيقة. كل النتائج محسوبة، لم يُقَس منها شيء.</p>
+    <h1 data-k="hdr_title">AeroBooster – محاكي السيناريوهات والتصميم العملي (النسخة C)</h1>
+    <p data-k="hdr_sub">مخزن ملحي يُشحن بالألواح الكهروضوئية أو بالحوض المتتبّع، لطبخ وخبز وماء ساخن وتدفئة – من كشك الشاي إلى المصنع. محاكاة سنوية 365 يومًا بخطوة 15 دقيقة. كل النتائج محسوبة، لم يُقَس منها شيء.</p>
   </div>
 </header>
 
@@ -74,6 +74,16 @@ footer{max-width:1500px;margin:0 auto;padding:0 16px 30px;font-size:11.5px;color
   <div class="seg" id="langSeg">
     <button class="segb on" data-lang="ar">عربي</button>
     <button class="segb" data-lang="en">English</button>
+    <select id="gsel" class="segb" style="background:#fff;border:1px solid #1e3a5c;cursor:pointer" title="Translate whole page (Google)">
+      <option value="">🌐 ترجمة الصفحة…</option>
+      <option value="en">English (كامل)</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="tr">Türkçe</option>
+      <option value="ru">Русский</option>
+      <option value="zh-CN">中文</option>
+    </select>
   </div>
 </nav>
 
@@ -1367,27 +1377,53 @@ footer{max-width:1500px;margin:0 auto;padding:0 16px 30px;font-size:11.5px;color
 
 </script>
 <script>
-/* AeroBooster — prototype-experiment mode + full-page translate. Self-contained; does not touch the simulator engine. */
+/* AeroBooster — prototype-experiment mode + native AR/EN + Google full-page translate for other languages. Self-contained; does not touch the simulator engine. */
 (function(){
   var $=function(id){return document.getElementById(id);};
-  var Ta=29;
+  var Ta=29, lang='ar';
   var DATA={
-    salt:{label:'ملح نترات', base:{peak:255,t200:18.3,t150:33.3}, imp:{peak:255,t200:39.7,t150:67.9}},
-    iron:{label:'حديد + رمل', base:{peak:320,t200:22.8,t150:43.7}, imp:{peak:320,t200:48.5,t150:87.2}}
+    salt:{label:{ar:'ملح نترات',en:'Nitrate salt'}, base:{peak:255,t200:18.3,t150:33.3}, imp:{peak:255,t200:39.7,t150:67.9}},
+    iron:{label:{ar:'حديد + رمل',en:'Iron + sand'}, base:{peak:320,t200:22.8,t150:43.7}, imp:{peak:320,t200:48.5,t150:87.2}}
   };
-  var INS={base:'الحالي',imp:'محسّن'};
-  var COMP=[['خزان فولاذي','Ø300×200، 3مم'],['صاج طهي','حديد زهر Ø330×12'],['سخان حزامي','3.8Ω على الجدار'],
-    ['الحشوة','حديد+رمل أو ملح'],['العزل','ألياف+صوف صخري(+مجهري)'],['منفذ تجفيف','للرطوبة أول تسخين'],
-    ['لوح شمسي','~592 واط'],['عدة تيار مستمر','عازل+قاطع+مرحّل+عدّاد'],['مسجّل حراري','مزدوجات K']];
+  var I18N={
+    hdr_title:{ar:'AeroBooster – محاكي السيناريوهات والتصميم العملي (النسخة C)',en:'AeroBooster – scenario & practical-design simulator (Rev C)'},
+    hdr_sub:{ar:'مخزن ملحي يُشحن بالألواح الكهروضوئية أو بالحوض المتتبّع، لطبخ وخبز وماء ساخن وتدفئة – من كشك الشاي إلى المصنع. محاكاة سنوية 365 يومًا بخطوة 15 دقيقة. كل النتائج محسوبة، لم يُقَس منها شيء.',en:'A salt heat store charged by PV panels or a tracking trough — for cooking, baking, hot water and heating, from a tea stall to a factory. 365-day annual simulation at 15-minute steps. All results are computed; nothing is measured.'},
+    mode_sim:{ar:'المحاكي الكامل',en:'Full simulator'},
+    mode_exp:{ar:'🔬 تجربة النموذج المصغّر',en:'🔬 Prototype experiment'},
+    exp_title:{ar:'🔬 تجربة النموذج المصغّر (P1)',en:'🔬 Prototype experiment (P1)'},
+    exp_intro:{ar:'تقدير تفاعلي لأداء المخزن المصغّر: اختر الحشوة ومستوى العزل واقرأ ذروة الحرارة وزمن التخزين. أرقام النموذج لا قياسات؛ لم يُبنَ النموذج بعد.',
+      en:'Interactive estimate of the bench store: pick the fill and insulation and read peak temperature and storage time. Model figures, not measurements; nothing is built yet.'},
+    exp_fill:{ar:'الحشوة',en:'Fill'}, fill_salt:{ar:'ملح نترات',en:'Nitrate salt'}, fill_iron:{ar:'حديد + رمل',en:'Iron + sand'},
+    exp_ins:{ar:'العزل',en:'Insulation'}, ins_base:{ar:'الحالي',en:'As-built'}, ins_imp:{ar:'محسّن',en:'Improved'},
+    exp_thr:{ar:'حد الحرارة الصالح',en:'Usable threshold'},
+    exp_table:{ar:'النتائج المحسوبة (نموذج)',en:'Computed results (model)'},
+    exp_note:{ar:'يبني هذا العمل على فنّ سابق ويذكره (NTNU/Morpho، رمل غانا، صخور أوغندا، صاج إثيوبيا). الأرقام مخرجات محاكاة لا قياسات.',
+      en:'This work builds on and cites prior art (NTNU/Morpho, Ghana sand, Uganda rock, Ethiopian mitad). Figures are simulation outputs, not measurements.'}
+  };
+  var L={
+    ar:{peak:'ذروة حرارة المخزن',stime:'زمن التخزين حتى الحد',energy:'الطاقة المخزّنة (حتى 25°)',to2:'حتى 200° / 150°',hours:'ساعة',
+        th:['الحشوة','العزل','الذروة','حتى 200°','حتى 150°'],axisT:'حرارة المخزن °C',axisH:'ساعات بعد الشحن',thr:'الحد',comp:'مكوّنات النموذج'},
+    en:{peak:'Peak store temp',stime:'Storage time to threshold',energy:'Stored energy (to 25°)',to2:'to 200° / 150°',hours:'h',
+        th:['Fill','Insulation','Peak','to 200°','to 150°'],axisT:'Store temp °C',axisH:'hours after charge',thr:'threshold',comp:'Prototype components'}
+  };
+  var COMP=[
+    {ar:['خزان فولاذي','Ø300×200، 3مم'],en:['Steel tank','Ø300×200, 3mm']},
+    {ar:['صاج طهي','حديد زهر Ø330×12'],en:['Cooking plate','cast iron Ø330×12']},
+    {ar:['سخان حزامي','3.8Ω على الجدار'],en:['Band heater','3.8Ω on wall']},
+    {ar:['الحشوة','حديد+رمل أو ملح'],en:['Fill','iron+sand or salt']},
+    {ar:['العزل','ألياف+صوف صخري(+مجهري)'],en:['Insulation','fibre+rock wool(+microporous)']},
+    {ar:['منفذ تجفيف','للرطوبة أول تسخين'],en:['Moisture vent','first-heat dry-out']},
+    {ar:['لوح شمسي','~592 واط'],en:['PV module','~592 W']},
+    {ar:['عدة تيار مستمر','عازل+قاطع+مرحّل+عدّاد'],en:['DC gear','isolator+breaker+relay+meter']},
+    {ar:['مسجّل حراري','مزدوجات K'],en:['Logger','K thermocouples']}
+  ];
   var fill='salt', ins='base';
 
   function curCase(){return DATA[fill][ins];}
-  function timeTo(c,Tx){ // piecewise-linear through the computed anchors (peak,0),(200,t200),(150,t150)
-    if(Tx>=c.peak)return 0;
+  function timeTo(c,Tx){ if(Tx>=c.peak)return 0;
     if(Tx>=200)return c.t200*(c.peak-Tx)/(c.peak-200);
     if(Tx>=150)return c.t200+(c.t150-c.t200)*(200-Tx)/50;
-    return c.t150+(c.t150-c.t200)/50*(150-Tx);
-  }
+    return c.t150+(c.t150-c.t200)/50*(150-Tx); }
   function storedkWh(){var p=curCase().peak;
     return fill==='salt' ? (19.5*1.45*(p-25)+19.5*97)/3600 : ((61.6*0.5+7.4*0.9)*(p-25))/3600;}
 
@@ -1400,50 +1436,51 @@ footer{max-width:1500px;margin:0 auto;padding:0 16px 30px;font-size:11.5px;color
     var gx=''; for(i=0;i<=tMax;i+=Math.ceil(tMax/8/6)*6||12){gx+='<text x="'+x(i)+'" y="'+(H-pb+14)+'" font-size="10" text-anchor="middle" fill="#8a8984">'+i+'</text>';}
     return '<svg class="chart" viewBox="0 0 '+W+' '+H+'" dir="ltr">'
       +'<rect x="'+pl+'" y="'+pt+'" width="'+(W-pl-pr)+'" height="'+(H-pt-pb)+'" fill="#fff" stroke="#e3e1da"/>'
-      +hline(200,'#c2410c','200°C')+hline(150,'#b45309','150°C')+hline(Tx,'#1e3a5c','الحد '+Tx+'°')
+      +hline(200,'#c2410c','200°C')+hline(150,'#b45309','150°C')+hline(Tx,'#1e3a5c',L[lang].thr+' '+Tx+'°')
       +'<path d="'+pts+'" fill="none" stroke="#ea580c" stroke-width="2.5"/>'
       +'<circle cx="'+x(timeTo(c,Tx))+'" cy="'+y(Tx)+'" r="4" fill="#1e3a5c"/>'
-      +gx+'<text x="'+(W/2)+'" y="'+(H-2)+'" font-size="11" text-anchor="middle" fill="#52514e">ساعات بعد الشحن</text>'
-      +'<text x="12" y="'+(H/2)+'" font-size="11" text-anchor="middle" fill="#52514e" transform="rotate(-90 12 '+(H/2)+')">حرارة المخزن °C</text></svg>';
+      +gx+'<text x="'+(W/2)+'" y="'+(H-2)+'" font-size="11" text-anchor="middle" fill="#52514e">'+L[lang].axisH+'</text>'
+      +'<text x="12" y="'+(H/2)+'" font-size="11" text-anchor="middle" fill="#52514e" transform="rotate(-90 12 '+(H/2)+')">'+L[lang].axisT+'</text></svg>';
   }
 
   function kpi(v,l,cls){return '<div class="kpi"><div class="v '+(cls||'')+'">'+v+'</div><div class="l">'+l+'</div></div>';}
   function renderExp(){
-    var c=curCase(), Tx=+$('thr').value, t=timeTo(c,Tx);
+    var c=curCase(), Tx=+$('thr').value, t=timeTo(c,Tx), lg=L[lang];
     $('thrV').textContent=Tx;
-    $('expKpis').innerHTML=kpi(c.peak+' °C','ذروة حرارة المخزن')+kpi(t.toFixed(1)+' ساعة','زمن التخزين حتى '+Tx+'°','good')
-      +kpi(storedkWh().toFixed(2)+' kWh','الطاقة المخزّنة (حتى 25°)')+kpi(c.t200+' / '+c.t150+' ساعة','حتى 200° / 150°');
+    $('expKpis').innerHTML=kpi(c.peak+' °C',lg.peak)+kpi(t.toFixed(1)+' '+lg.hours,lg.stime+' '+Tx+'°','good')
+      +kpi(storedkWh().toFixed(2)+' kWh',lg.energy)+kpi(c.t200+' / '+c.t150+' '+lg.hours,lg.to2);
     $('expChart').innerHTML=chart(c,Tx);
-    var rows='<table><tr><th>الحشوة</th><th>العزل</th><th>الذروة</th><th>حتى 200°</th><th>حتى 150°</th></tr>';
+    var rows='<table><tr>'+lg.th.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr>';
     [['salt','base'],['salt','imp'],['iron','base'],['iron','imp']].forEach(function(p){var d=DATA[p[0]][p[1]],on=(p[0]===fill&&p[1]===ins);
-      rows+='<tr'+(on?' style="background:#fff7f1;font-weight:700"':'')+'><td>'+DATA[p[0]].label+'</td><td>'+INS[p[1]]+'</td><td class="n">'+d.peak+'°</td><td class="n">'+d.t200+'</td><td class="n">'+d.t150+'</td></tr>';});
+      rows+='<tr'+(on?' style="background:#fff7f1;font-weight:700"':'')+'><td>'+DATA[p[0]].label[lang]+'</td><td>'+I18N['ins_'+p[1]][lang]+'</td><td class="n">'+d.peak+'°</td><td class="n">'+d.t200+'</td><td class="n">'+d.t150+'</td></tr>';});
     $('expTable').innerHTML=rows+'</table>';
-    $('compList').innerHTML='<label style="grid-column:1/-1;margin:0">مكوّنات النموذج</label>'+COMP.map(function(x){return '<div><b>'+x[0]+'</b>'+x[1]+'</div>';}).join('');
+    $('compList').innerHTML='<label style="grid-column:1/-1;margin:0">'+lg.comp+'</label>'+COMP.map(function(x){return '<div><b>'+x[lang][0]+'</b>'+x[lang][1]+'</div>';}).join('');
   }
 
   function setMode(m){ $('simView').style.display=m==='sim'?'':'none'; $('expView').style.display=m==='exp'?'':'none';
     document.querySelectorAll('#modeSeg .segb').forEach(function(b){b.classList.toggle('on',b.dataset.mode===m);});
     if(m==='exp') renderExp(); }
 
-  // Full-page translation via Google's current translate proxy (translates the header, the whole simulator and this panel).
+  function setLang(l){ lang=l;
+    document.querySelectorAll('[data-k]').forEach(function(el){var k=el.getAttribute('data-k'); if(I18N[k])el.textContent=I18N[k][l];});
+    document.querySelectorAll('#langSeg .segb[data-lang]').forEach(function(b){b.classList.toggle('on',b.dataset.lang===l);});
+    $('expView').dir=l==='en'?'ltr':'rtl';
+    if($('expView').style.display!=='none') renderExp();
+  }
+
+  // Google full-page translation for OTHER languages, via Google's current translate proxy.
   function transHost(h){return h.replace(/-/g,'--').replace(/\./g,'-');}
   function onProxy(){return location.hostname.indexOf('.translate.goog')>=0;}
-  function toEN(){ if(onProxy())return; var sep=location.search?location.search+'&':'?';
-    location.href='https://'+transHost(location.hostname)+'.translate.goog'+location.pathname+sep+'_x_tr_sl=ar&_x_tr_tl=en&_x_tr_hl=en'; }
-  function toAR(){ if(!onProxy())return;
-    var host=location.hostname.replace(/\.translate\.goog$/,'').replace(/--/g,'\u0001').replace(/-/g,'.').replace(/\u0001/g,'-');
-    var q=location.search.replace(/[?&]_x_tr_[^=]*=[^&]*/g,'').replace(/^&/,'?');
-    location.href=location.protocol+'//'+host+location.pathname+(q&&q!=='?'?q:''); }
+  function gTranslate(tl){ if(onProxy()||!tl)return; var sep=location.search?location.search+'&':'?';
+    location.href='https://'+transHost(location.hostname)+'.translate.goog'+location.pathname+sep+'_x_tr_sl=auto&_x_tr_tl='+tl+'&_x_tr_hl='+tl; }
 
   document.querySelectorAll('#modeSeg .segb').forEach(function(b){b.onclick=function(){setMode(b.dataset.mode);};});
-  document.querySelectorAll('#langSeg .segb[data-lang]').forEach(function(b){b.onclick=function(){b.dataset.lang==='en'?toEN():toAR();};});
+  document.querySelectorAll('#langSeg .segb[data-lang]').forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
   document.querySelectorAll('#fillSeg .segb').forEach(function(b){b.onclick=function(){fill=b.dataset.fill;document.querySelectorAll('#fillSeg .segb').forEach(function(x){x.classList.toggle('on',x===b);});renderExp();};});
   document.querySelectorAll('#insSeg .segb').forEach(function(b){b.onclick=function(){ins=b.dataset.ins;document.querySelectorAll('#insSeg .segb').forEach(function(x){x.classList.toggle('on',x===b);});renderExp();};});
   $('thr').oninput=renderExp;
-  // reflect translate state on the language buttons
-  var en=onProxy();
-  document.querySelectorAll('#langSeg .segb[data-lang]').forEach(function(b){b.classList.toggle('on',b.dataset.lang===(en?'en':'ar'));});
-  renderExp();
+  if($('gsel')) $('gsel').onchange=function(){gTranslate(this.value);};
+  setLang('ar');
 })();
 </script>
 </body>
